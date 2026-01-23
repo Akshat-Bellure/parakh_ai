@@ -59,11 +59,16 @@ export interface GeneratedImage {
 }
 
 declare global {
+  // Define AIStudio interface to ensure it has the required methods.
+  // This will merge with any existing AIStudio interface if defined globally.
+  interface AIStudio {
+    hasSelectedApiKey: () => Promise<boolean>;
+    openSelectKey: () => Promise<void>;
+  }
+
   interface Window {
     webkitAudioContext: typeof AudioContext;
-    aistudio?: {
-      hasSelectedApiKey: () => Promise<boolean>;
-      openSelectKey: () => Promise<void>;
-    };
+    // aistudio is assumed to be defined elsewhere as type AIStudio.
+    // Removing the explicit declaration here avoids the "Subsequent property declarations" error.
   }
 }

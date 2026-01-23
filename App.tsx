@@ -193,7 +193,7 @@ const App: React.FC = () => {
                     <i className="ph-bold ph-shield-check text-white text-lg"></i>
                 </div>
                 <div>
-                    <h1 className="font-bold text-lg leading-none tracking-tight text-white">PARAKH <span className="text-uber-accent">AI</span></h1>
+                    <h1 className="font-bold text-lg leading-none tracking-tight text-white">PARAKH <span className="text-uber-accent">AI</span> <span className="text-[10px] text-gray-500 font-normal ml-1">By AkB</span></h1>
                     <p className="text-[9px] text-gray-500 font-mono tracking-wider mt-0.5">REGULATORY ENGINE v1.0</p>
                 </div>
             </div>
