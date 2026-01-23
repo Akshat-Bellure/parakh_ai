@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Parakh AI | Legitimate Rating Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        uber: {
+                            black: '#050505',
+                            card: '#0f0f0f',
+                            border: '#222222',
+                            accent: '#3B82F6', // Medical Blue
+                            success: '#10B981', // Safe Green
+                            warning: '#F59E0B', // Caution Yellow
+                            danger: '#EF4444'   // Danger Red
+                        }
+                    },
+                    animation: {
+                        'scan-sweep': 'scanSweep 2s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                    },
+                    keyframes: {
+                        scanSweep: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(100%)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #e2e8f0; -webkit-tap-highlight-color: transparent; }
+        .score-circle { transform: rotate(-90deg); transform-origin: 50% 50%; }
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        .markdown-body p { margin-bottom: 0.5rem; }
+        .markdown-body ul { list-style-type: disc; padding-left: 1.25rem; margin-bottom: 0.5rem; }
+        .markdown-body ol { list-style-type: decimal; padding-left: 1.25rem; margin-bottom: 0.5rem; }
+        .markdown-body strong { color: #fff; font-weight: 700; }
+        .markdown-body h1, .markdown-body h2, .markdown-body h3 { font-weight: 700; color: #fff; margin-top: 1rem; margin-bottom: 0.5rem; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+  </head>
+  <body class="bg-uber-black text-gray-200 antialiased h-screen overflow-hidden selection:bg-uber-accent selection:text-white">
+    <div id="root" class="h-full flex flex-col"></div>
+  </body>
+</html>

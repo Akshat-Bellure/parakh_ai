@@ -1,0 +1,7 @@
+{
+  "name": "Parakh AI",
+  "description": "Regulatory Engine for Product Verification",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
